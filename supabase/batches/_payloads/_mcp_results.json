@@ -29,8 +29,7 @@
   },
   {
     "file": "us-0009.sql",
-    "status": "pending",
-    "query_len": 20815
+    "status": "success"
   },
   {
     "file": "us-0010.sql",
