@@ -141,6 +141,7 @@ input[type="date"] {
   background: #fff;
   transition: border-color 0.15s, box-shadow 0.15s;
   -webkit-appearance: none;
+  appearance: none;
 }
 
 input:focus {
@@ -259,6 +260,59 @@ footer {
 footer a {
   color: var(--brand);
   text-decoration: none;
+}
+
+/* Searchable select (country / course) */
+.searchableSelect {
+  position: relative;
+}
+
+.searchableSelectList {
+  position: absolute;
+  z-index: 50;
+  left: 0;
+  right: 0;
+  top: calc(100% + 4px);
+  max-height: 240px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 6px 0;
+  list-style: none;
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.searchableSelectList li button {
+  display: block;
+  width: 100%;
+  padding: 10px 13px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.searchableSelectList li button:hover,
+.searchableSelectList li button.isSelected {
+  background: var(--brand-bg);
+  color: var(--brand-dark);
+}
+
+.searchableSelectManual button {
+  font-weight: 600;
+  color: var(--brand-dark);
+  border-top: 1px solid var(--border);
+}
+
+.searchableSelectHint {
+  padding: 10px 13px;
+  font-size: 12px;
+  color: var(--muted);
 }
 
 @media (max-width: 400px) {

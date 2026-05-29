@@ -1,6 +1,8 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { SearchableSelect } from "@/components/SearchableSelect";
+import { COUNTRIES } from "@/data/countries";
 
 type FieldKey =
   | "playerId"
@@ -46,6 +48,35 @@ export default function Page() {
     | { kind: "error"; message: string }
     | null
   >(null);
+  const [courseOptions, setCourseOptions] = useState<string[]>([]);
+  const [coursesLoading, setCoursesLoading] = useState(false);
+
+  useEffect(() => {
+    const country = values.country.trim();
+    if (country.length < 2) {
+      setCourseOptions([]);
+      return;
+    }
+
+    const controller = new AbortController();
+    setCoursesLoading(true);
+
+    fetch(`/api/golf-courses?country=${encodeURIComponent(country)}`, {
+      signal: controller.signal,
+    })
+      .then((res) => res.json())
+      .then((data: { courses?: string[] }) => {
+        setCourseOptions(data.courses ?? []);
+      })
+      .catch(() => {
+        if (!controller.signal.aborted) setCourseOptions([]);
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setCoursesLoading(false);
+      });
+
+    return () => controller.abort();
+  }, [values.country]);
 
   const errors = useMemo(() => {
     const e: Partial<Record<FieldKey, string>> = {};
@@ -84,6 +115,17 @@ export default function Page() {
 
   function setField<K extends FieldKey>(key: K, value: string) {
     setValues((s) => ({ ...s, [key]: value }));
+  }
+
+  function setCountry(country: string) {
+    setValues((s) => ({
+      ...s,
+      country,
+      courseName: s.country !== country ? "" : s.courseName,
+    }));
+    if (touched.courseName) {
+      setTouched((t) => ({ ...t, courseName: false }));
+    }
   }
 
   function markTouched(key: FieldKey) {
@@ -273,17 +315,18 @@ export default function Page() {
             <div className="field">
               <label htmlFor="country">
                 Country <span className="required">*</span>
+                <span className="hint">Search the list or enter manually if not listed</span>
               </label>
-              <input
-                type="text"
+              <SearchableSelect
                 id="country"
-                name="country"
-                placeholder="e.g. United Kingdom"
-                autoComplete="country-name"
                 value={values.country}
-                onChange={(e) => setField("country", e.target.value)}
+                onChange={setCountry}
                 onBlur={() => markTouched("country")}
-                className={touched.country && errors.country ? "invalid" : undefined}
+                options={COUNTRIES}
+                placeholder="Search countries…"
+                invalid={Boolean(touched.country && errors.country)}
+                allowManual
+                manualLabel={(q) => `Use "${q}" (country not listed)`}
               />
               {touched.country && errors.country ? <div className="fieldError">{errors.country}</div> : null}
             </div>
@@ -291,16 +334,31 @@ export default function Page() {
             <div className="field">
               <label htmlFor="courseName">
                 Course Name <span className="required">*</span>
+                <span className="hint">
+                  {values.country.trim()
+                    ? "Courses for selected country — search or enter manually"
+                    : "Select a country first"}
+                </span>
               </label>
-              <input
-                type="text"
+              <SearchableSelect
                 id="courseName"
-                name="courseName"
-                placeholder="e.g. Royal Birkdale Golf Club"
                 value={values.courseName}
-                onChange={(e) => setField("courseName", e.target.value)}
+                onChange={(v) => setField("courseName", v)}
                 onBlur={() => markTouched("courseName")}
-                className={touched.courseName && errors.courseName ? "invalid" : undefined}
+                options={courseOptions}
+                placeholder={
+                  values.country.trim() ? "Search courses…" : "Select a country first"
+                }
+                disabled={!values.country.trim()}
+                loading={coursesLoading}
+                invalid={Boolean(touched.courseName && errors.courseName)}
+                allowManual
+                emptyHint={
+                  values.country.trim()
+                    ? "No courses in our list yet for this country — use manual entry below."
+                    : "Select a country first."
+                }
+                manualLabel={(q) => `Use "${q}" (course not listed)`}
               />
               {touched.courseName && errors.courseName ? (
                 <div className="fieldError">{errors.courseName}</div>

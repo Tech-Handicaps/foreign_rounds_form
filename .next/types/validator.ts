@@ -65,6 +65,15 @@ type RouteHandlerConfig<Route extends AppRouteHandlerRoutes = AppRouteHandlerRou
   type __Unused = __Check
 }
 
+// Validate ../../app/api/golf-courses/route.ts
+{
+  type __IsExpected<Specific extends RouteHandlerConfig<"/api/golf-courses">> = Specific
+  const handler = {} as typeof import("../../app/api/golf-courses/route.js")
+  type __Check = __IsExpected<typeof handler>
+  // @ts-ignore
+  type __Unused = __Check
+}
+
 
 
 
