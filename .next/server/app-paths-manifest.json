@@ -1,1 +1,4 @@
-{}
+{
+  "/api/golf-courses/route": "app/api/golf-courses/route.js",
+  "/page": "app/page.js"
+}

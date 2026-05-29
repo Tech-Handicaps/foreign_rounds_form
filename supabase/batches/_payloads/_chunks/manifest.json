@@ -1,0 +1,89 @@
+[
+  {
+    "chunkName": "chunk-0003-0006.sql",
+    "files": [
+      "us-0003.sql",
+      "us-0004.sql",
+      "us-0005.sql",
+      "us-0006.sql"
+    ],
+    "sqlLen": 83329,
+    "project_id": "igmuuvrjmrgnxadewbec"
+  },
+  {
+    "chunkName": "chunk-0007-0010.sql",
+    "files": [
+      "us-0007.sql",
+      "us-0008.sql",
+      "us-0009.sql",
+      "us-0010.sql"
+    ],
+    "sqlLen": 83624,
+    "project_id": "igmuuvrjmrgnxadewbec"
+  },
+  {
+    "chunkName": "chunk-0011-0014.sql",
+    "files": [
+      "us-0011.sql",
+      "us-0012.sql",
+      "us-0013.sql",
+      "us-0014.sql"
+    ],
+    "sqlLen": 83927,
+    "project_id": "igmuuvrjmrgnxadewbec"
+  },
+  {
+    "chunkName": "chunk-0015-0018.sql",
+    "files": [
+      "us-0015.sql",
+      "us-0016.sql",
+      "us-0017.sql",
+      "us-0018.sql"
+    ],
+    "sqlLen": 83381,
+    "project_id": "igmuuvrjmrgnxadewbec"
+  },
+  {
+    "chunkName": "chunk-0019-0022.sql",
+    "files": [
+      "us-0019.sql",
+      "us-0020.sql",
+      "us-0021.sql",
+      "us-0022.sql"
+    ],
+    "sqlLen": 83584,
+    "project_id": "igmuuvrjmrgnxadewbec"
+  },
+  {
+    "chunkName": "chunk-0023-0026.sql",
+    "files": [
+      "us-0023.sql",
+      "us-0024.sql",
+      "us-0025.sql",
+      "us-0026.sql"
+    ],
+    "sqlLen": 84199,
+    "project_id": "igmuuvrjmrgnxadewbec"
+  },
+  {
+    "chunkName": "chunk-0027-0030.sql",
+    "files": [
+      "us-0027.sql",
+      "us-0028.sql",
+      "us-0029.sql",
+      "us-0030.sql"
+    ],
+    "sqlLen": 85155,
+    "project_id": "igmuuvrjmrgnxadewbec"
+  },
+  {
+    "chunkName": "chunk-0031-0033.sql",
+    "files": [
+      "us-0031.sql",
+      "us-0032.sql",
+      "us-0033.sql"
+    ],
+    "sqlLen": 46990,
+    "project_id": "igmuuvrjmrgnxadewbec"
+  }
+]
