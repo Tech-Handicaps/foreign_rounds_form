@@ -1,0 +1,168 @@
+{
+  "succeeded": 32,
+  "failed": [],
+  "total": 32,
+  "count": 13307,
+  "results": [
+    {
+      "file": "us-0002.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0003.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0004.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0005.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0006.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0007.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0008.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0009.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0010.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0011.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0012.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0013.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0014.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0015.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0016.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0017.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0018.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0019.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0020.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0021.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0022.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0023.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0024.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0025.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0026.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0027.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0028.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0029.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0030.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0031.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0032.json",
+      "status": "success",
+      "rows": 400
+    },
+    {
+      "file": "us-0033.json",
+      "status": "success",
+      "rows": 103
+    }
+  ]
+}

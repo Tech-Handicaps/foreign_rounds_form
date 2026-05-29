@@ -1,0 +1,98 @@
+[
+  {
+    "id": "chunk_us-0010_us-0011",
+    "files": [
+      "us-0010.sql",
+      "us-0011.sql"
+    ],
+    "len": 41774
+  },
+  {
+    "id": "chunk_us-0012_us-0013",
+    "files": [
+      "us-0012.sql",
+      "us-0013.sql"
+    ],
+    "len": 41611
+  },
+  {
+    "id": "chunk_us-0014_us-0015",
+    "files": [
+      "us-0014.sql",
+      "us-0015.sql"
+    ],
+    "len": 41912
+  },
+  {
+    "id": "chunk_us-0016_us-0017",
+    "files": [
+      "us-0016.sql",
+      "us-0017.sql"
+    ],
+    "len": 41727
+  },
+  {
+    "id": "chunk_us-0018_us-0019",
+    "files": [
+      "us-0018.sql",
+      "us-0019.sql"
+    ],
+    "len": 41775
+  },
+  {
+    "id": "chunk_us-0020_us-0021",
+    "files": [
+      "us-0020.sql",
+      "us-0021.sql"
+    ],
+    "len": 42110
+  },
+  {
+    "id": "chunk_us-0022_us-0023",
+    "files": [
+      "us-0022.sql",
+      "us-0023.sql"
+    ],
+    "len": 41914
+  },
+  {
+    "id": "chunk_us-0024_us-0025",
+    "files": [
+      "us-0024.sql",
+      "us-0025.sql"
+    ],
+    "len": 42440
+  },
+  {
+    "id": "chunk_us-0026_us-0027",
+    "files": [
+      "us-0026.sql",
+      "us-0027.sql"
+    ],
+    "len": 41948
+  },
+  {
+    "id": "chunk_us-0028_us-0029",
+    "files": [
+      "us-0028.sql",
+      "us-0029.sql"
+    ],
+    "len": 42907
+  },
+  {
+    "id": "chunk_us-0030_us-0031",
+    "files": [
+      "us-0030.sql",
+      "us-0031.sql"
+    ],
+    "len": 41695
+  },
+  {
+    "id": "chunk_us-0032_us-0033",
+    "files": [
+      "us-0032.sql",
+      "us-0033.sql"
+    ],
+    "len": 26383
+  }
+]
